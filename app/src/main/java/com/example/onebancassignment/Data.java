@@ -6,22 +6,22 @@ import java.util.Arrays;
 
 public class Data {
 
-    private static Dish dishNorth1 = new Dish(R.drawable.south_indian,"",0,0);
-    private static Dish dishNorth2 = new Dish(R.drawable.south_indian,"",0,0);
-    private static Dish dishNorth3 = new Dish(R.drawable.south_indian,"Devanshu",20,0);
-    private static Dish dishSouth1 = new Dish(R.drawable.south_indian,"",0,0);
-    private static Dish dishSouth2 = new Dish(R.drawable.south_indian,"Devanshu",0,0);
-    private static Dish dishSouth3 = new Dish(R.drawable.south_indian,"",0,0);
-    private static Dish dishItanian1 = new Dish(R.drawable.south_indian,"",0,0);
-    private static Dish dishItanian2 = new Dish(R.drawable.south_indian,"Devanshu",0,0);
-    private static Dish dishItanian3 = new Dish(R.drawable.south_indian,"",0,0);
+    private static Dish dishNorth1 = new Dish(R.drawable.thali,"Thali",150,4);
+    private static Dish dishNorth2 = new Dish(R.drawable.gulab_jamun,"Gulab Jamun",20,3);
+    private static Dish dishNorth3 = new Dish(R.drawable.paneer,"Paneer",200,5);
+    private static Dish dishSouth1 = new Dish(R.drawable.south_thali,"South Thali",120,4);
+    private static Dish dishSouth2 = new Dish(R.drawable.dosa,"Dosa",150,5);
+    private static Dish dishSouth3 = new Dish(R.drawable.idli,"",100,4);
+    private static Dish dishItanian1 = new Dish(R.drawable.manchurian,"Manchurian",150,4);
+    private static Dish dishItanian2 = new Dish(R.drawable.noodles,"Noodles",160,5);
+    private static Dish dishItanian3 = new Dish(R.drawable.chili_potato,"Chili Potato",90,4);
 
 
     private static ArrayList<Cuisine> cuisines = new ArrayList<Cuisine>(
             Arrays.asList(
                     new Cuisine((R.drawable.north_indian),"North Indian"),
                     new Cuisine((R.drawable.south_indian),"South Indian"),
-                    new Cuisine((R.drawable.italian),"Italian"))
+                    new Cuisine((R.drawable.italian),"Chinese"))
     );
 
     private static ArrayList <Dish> dishesNorth = new ArrayList<Dish>(
