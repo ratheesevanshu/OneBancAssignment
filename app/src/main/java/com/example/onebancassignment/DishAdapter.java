@@ -39,6 +39,8 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.ViewHolder> {
         holder.title.setText(dishList.get(position).getName());
         holder.price.setText(String.valueOf(dishList.get(position).getPrice()));
         holder.rating.setText(String.valueOf(dishList.get(position).getRating()));
+        holder.quantity.setText(String.valueOf(dishList.get(position).getQuantity()));
+
 
         holder.imageView.setImageDrawable(activity.getResources().getDrawable(dishList.get(position).getImage()));
         if(showQuantity){

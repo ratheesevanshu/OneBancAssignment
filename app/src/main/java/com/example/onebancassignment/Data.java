@@ -8,7 +8,7 @@ public class Data {
 
     private static Dish dishNorth1 = new Dish(R.drawable.south_indian,"",0,0);
     private static Dish dishNorth2 = new Dish(R.drawable.south_indian,"",0,0);
-    private static Dish dishNorth3 = new Dish(R.drawable.south_indian,"Devanshu",0,0);
+    private static Dish dishNorth3 = new Dish(R.drawable.south_indian,"Devanshu",20,0);
     private static Dish dishSouth1 = new Dish(R.drawable.south_indian,"",0,0);
     private static Dish dishSouth2 = new Dish(R.drawable.south_indian,"Devanshu",0,0);
     private static Dish dishSouth3 = new Dish(R.drawable.south_indian,"",0,0);

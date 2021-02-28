@@ -13,7 +13,8 @@ public class CartActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     TextView dishes, sgst, cgst, net;
-    int _dishes=0, _sgst=0, _cgst=0, _net=0;
+    int _dishes=0;
+    Double _sgst=0.0, _cgst=0.0 , _net=0.0;
 
     ArrayList<Dish> disheList =  new ArrayList<>();
     CartAdapter cartAdapter;
@@ -59,8 +60,8 @@ public class CartActivity extends AppCompatActivity {
         for(Dish d : disheList){
             _dishes += d.getQuantity()*d.getPrice();
         }
-        _cgst = (int) (_dishes*0.025);
-        _sgst = (int) (_dishes*0.025);
+        _cgst =  (_dishes*0.025);
+        _sgst =  (_dishes*0.025);
         _net = _dishes + _sgst + _cgst;
 
         dishes.setText(String.valueOf(_dishes));
