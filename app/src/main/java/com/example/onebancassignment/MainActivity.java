@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -14,12 +18,15 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView, dishRv;
     CuisineAdapter cuisineAdapter;
     DishAdapter dishAdapter;
+    Button cart;
+    Activity activity;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        activity = this;
         cuisines = Data.getCuisines();
 
         recyclerView = findViewById(R.id.recycler);
@@ -32,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
         dishRv.setLayoutManager(linearLayoutManager1);
         dishAdapter =  new DishAdapter(Data.getDishesTop(),this,false);
 
+        cart = findViewById(R.id.cart);
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity, CartActivity.class));
+            }
+        });
     }
 
     @Override
