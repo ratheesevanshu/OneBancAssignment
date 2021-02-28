@@ -51,14 +51,14 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 dishList.get(position).incQuantity();
-                holder.quantity.setText(dishList.get(position).getQuantity());
+                holder.quantity.setText(String.valueOf(dishList.get(position).getQuantity()));
             }
         });
         holder.sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dishList.get(position).decQuantity();
-                holder.quantity.setText(dishList.get(position).getQuantity());
+                holder.quantity.setText(String.valueOf(dishList.get(position).getQuantity()));
             }
         });
     }

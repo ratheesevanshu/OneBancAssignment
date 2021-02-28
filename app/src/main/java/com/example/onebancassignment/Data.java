@@ -16,10 +16,11 @@ public class Data {
     private static Dish dishItanian2 = new Dish(R.drawable.south_indian,"Devanshu",0,0);
     private static Dish dishItanian3 = new Dish(R.drawable.south_indian,"",0,0);
 
+
     private static ArrayList<Cuisine> cuisines = new ArrayList<Cuisine>(
             Arrays.asList(
-                    new Cuisine((R.drawable.south_indian),"South Indian"),
                     new Cuisine((R.drawable.north_indian),"North Indian"),
+                    new Cuisine((R.drawable.south_indian),"South Indian"),
                     new Cuisine((R.drawable.italian),"Italian"))
     );
 
@@ -51,6 +52,25 @@ public class Data {
                     dishSouth2
             )
     );
+
+    public static ArrayList<Dish> selected = dishesItalian;
+
+    public static void setSelected(int cuisine){
+        switch (cuisine){
+            case 0:
+                selected = dishesNorth;
+                break;
+            case 1:
+                selected = dishesSouth;
+                break;
+            case 2:
+                selected = dishesItalian;
+        }
+    }
+
+    public static ArrayList<Dish> getSelected() {
+        return selected;
+    }
 
     public static ArrayList<Cuisine> getCuisines() {
         return cuisines;

@@ -1,6 +1,7 @@
 package com.example.onebancassignment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,13 @@ public class CuisineAdapter extends RecyclerView.Adapter<CuisineAdapter.ViewHold
 
         holder.title.setText(cuisineList.get(position).getName());
         holder.imageView.setImageDrawable(activity.getResources().getDrawable(cuisineList.get(position).getImage()));
+        holder.full.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Data.setSelected(position);
+                activity.startActivity(new Intent(activity, OrderActivity.class));
+            }
+        });
 
     }
     @Override
