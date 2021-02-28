@@ -37,7 +37,7 @@ public class CuisineAdapter extends RecyclerView.Adapter<CuisineAdapter.ViewHold
     public void onBindViewHolder(@NonNull CuisineAdapter.ViewHolder holder, int position) {
 
         holder.title.setText(cuisineList.get(position).getName());
-        holder.imageView.setImageDrawable(cuisineList.get(position).getImage());
+        holder.imageView.setImageDrawable(activity.getResources().getDrawable(cuisineList.get(position).getImage()));
 
     }
     @Override

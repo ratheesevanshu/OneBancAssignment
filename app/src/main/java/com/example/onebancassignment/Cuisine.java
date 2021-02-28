@@ -3,19 +3,19 @@ package com.example.onebancassignment;
 import android.graphics.drawable.Drawable;
 
 public class Cuisine {
-    Drawable image;
+    int image;
     String name;
 
-    public Cuisine(Drawable image, String name) {
+    public Cuisine(int image, String name) {
         this.image = image;
         this.name = name;
     }
 
-    public Drawable getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
